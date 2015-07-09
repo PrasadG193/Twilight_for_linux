@@ -131,7 +131,7 @@ void MainWindow::on_bcontroller_actionTriggered(int action)
     if(val>=4882)
         val=4882;
     if(val<=50)
-        val=50;
+        val=25;
     const char* cmd= QString("sudo su -c \"echo %1 >/sys/class/backlight/intel_backlight/brightness\"").arg(val).toLatin1();
     QString str=QString::number(val/50);
     ui->lblPercent->setText(str+"%");
